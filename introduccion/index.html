@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //Deja un registro en la consola.
+        console.log('Pasó por aca.')
+        
+        var suma = 2 + 2;
+        alert('Mensaje para vos, usuario. ¿Sabías que 2 + 2 es ' + suma + '?');
+
+        const materia = 'Programacion 1';
+
+        var frase;
+        frase = 'Bienvenidos a ' + materia;
+        console.log('La frase "' + frase + '" tiene ' + frase.length + ' letras');
+
+        let i = 1
+        if (suma == 4) {
+            console.log('La suma dio correcta')
+            let i = 2
+            console.log('Como funciona LET: ' + i); //Devuelve 2
+        }
+        else
+        {
+            console.log('¿Que habrá sumado?')
+        }
+        console.log('Como funciona LET: ' + i); //Devuelve 1
+
+        //Enumerar los numeros del 1 al 10
+        //de 1 en 1
+        for(let i=0; i <= 10; i++){
+	        console.log(i)
+        }
+
+        //Objecto
+        var libro1 = {
+	        titulo: 'La insoportable levedad del ser',
+	        fecha_publicacion: 1984,
+            autor: 'Milan Kundera',
+            titulo_original: 'Nesnesitelná lehkost bytí'
+        };
+
+        console.log(libro1.titulo);
+        
+        var frutas = ["Manzana", "Banana", "Pera"];
+        console.log('Cantidad de frutas: ' + frutas.length);
+        frutas.forEach(function (elemento, indice, array) {
+            console.log(elemento, indice);
+        });
+        
+        var libros = new Array;
+        
+        var libro2 = {
+	        titulo: 'Cien años de soledad',
+	        fecha_publicacion: 1967,
+            autor: 'Gabriel García Márquez',
+            titulo_original: 'Cien años de soledad'
+        };
+
+        libros = [libro1, libro2]
+
+        libros.forEach(function (elemento, indice, array) {
+            console.log(elemento.titulo);
+            if (elemento.titulo != elemento.titulo_original){
+                console.log('El titulo original es: ' + elemento.titulo_original);
+            }
+
+        });
+
+        
+        let d = new Date();
+        document.body.innerHTML = "<h1 id= 'id_h1'>La hora es:  " + 
+        d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
+        + "</h1>"
+        
+        var elem = document.getElementById('id_h1');
+        if (2 + 3 == 6){
+            elem.style.color= "green";
+        }
+        else{
+            elem.style.color= "red";
+        }
+    </script>
+</body>
+</html>
