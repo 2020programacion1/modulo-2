@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>  
+        //1)      
+        //var nombre = prompt("Por favor, ingrese su nombre");
+        //var texto = "Su nombre es: " + nombre;
+        //alert(texto);
+
+        //2)
+        //var palabra = prompt("Por favor, ingrese una palabra");
+        //var cantidadLetras = palabra.length;
+        //var texto = "La palabra " + palabra + " tiene " + cantidadLetras + " letras";
+        //alert(texto);
+        //console.log(texto);
+
+        //3)
+        //Por formula
+        const n = 100;
+        var resultado = (n*(n+1))/2;
+        //console.log(resultado);
+        //alert("El resultado es: " + resultado);
+
+        //Por for
+        var sumadora = 0;
+        for (let i = 1; i <= 100; i++) {
+            sumadora = sumadora + i;
+        }
+
+        //alert("El resultado por fuerza bruta es: " + sumadora);
+
+        //4)
+        //modulo es el resto de una division
+        //var numero = prompt("Por favor, ingrese un numero");
+        //console.log(typeof(numero));//string
+        //numero = Number.parseInt(numero);//cast de objetos
+        //console.log(typeof(numero));//number
+        //var modulo = numero%2;
+        //if (modulo === 0) {
+        //    alert("El numero es par");
+        //} else {
+        //    alert("El numero es impar");
+        //}
+
+        //5)
+        //4 años puede entrar gratis, 
+        //si tiene entre 4 y 18 años debe pagar $5 
+        //si es mayor de 18 años, $10.
+        //var edad = prompt("Por favor, ingrese su edad");
+        
+        //TODO VALIDACION
+        
+        var precio;
+
+        //if fuerza bruta
+        /*
+        if (edad <= 4) {
+            precio = "Entra gratis";
+            
+        }
+        if (4 < edad && edad <= 18) {
+            precio = "Debe abonar $5";
+           
+        }
+        if (18 > edad && edad <= 25) {
+            precio = "Debe abonar $10";
+            
+        }
+        if(edad > 25){
+            precio = "Debe abonar $20";
+        }
+
+        */
+
+        //if else anidados
+        /*
+        if (edad <= 4) {
+            precio = "Entra gratis";
+            
+        }else{
+            if (4 < edad && edad <= 18) {
+                precio = "Debe abonar $5";
+           
+            }else{
+                if (18 > edad && edad <= 25) {
+                    precio = "Debe abonar $10";
+                }else{
+                    precio = "Debe abonar $20";
+                }
+            }
+
+        }
+
+
+        alert(precio);
+        */
+
+        //6)
+        //while
+        /*
+        console.log("Por while");
+        var numero = 1;
+
+        while (numero <= 20) {
+            if (numero === 1) {
+                numero = numero + 2;                
+            }else{
+                numero = numero + 3;
+                if (numero > 20) {
+                    break;
+                }
+            }            
+            console.log(numero);
+        }
+
+        //for
+        console.log("Por for");
+        for (let numero = 1; numero < 20; numero++) {
+            var modulo = numero%3;
+            if(modulo === 0){
+                console.log(numero);
+            }
+            
+        }
+        */
+
+        //8)
+        var limite = 10;
+        for (let fila = 1; fila < limite; fila++) {
+            var asteriscos = "";
+            for (let columna = 0; columna < fila; columna++) {
+                asteriscos = asteriscos + "*";
+            }
+            console.log(asteriscos);
+        }
+console.log("triangulo inverso");
+        for (let fila = 10; fila >= 1; fila--) {
+            var asteriscos = "";
+            for (let columna = 0; columna < fila; columna++) {
+                asteriscos = asteriscos + "*";
+            }
+            console.log(asteriscos);
+        }
+
+    </script>
+</body>
+</html>
